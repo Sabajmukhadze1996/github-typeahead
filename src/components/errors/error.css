@@ -1,0 +1,36 @@
+.error-container {
+  padding-inline: 1rem;
+  padding-block: 1rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.error-container img {
+  width: 450px;
+}
+
+.error-container p {
+  color: #ff0000;
+}
+
+@media (max-width: 590px) {
+  .error-container img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 410px) {
+  .error-container img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 340px) {
+  .error-container img {
+    width: 260px;
+  }
+}

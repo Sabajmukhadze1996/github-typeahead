@@ -7,10 +7,11 @@
   letter-spacing: 1px;
 }
 
-html,
-body,
-#root,
-.app-container {
+a {
+  text-decoration: none;
+}
+
+html, body, #root, .app-container {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
@@ -23,11 +24,23 @@ body,
 }
 
 .main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 40px;
+  row-gap: 40px;
   flex: 1;
   padding-inline: 3rem;
-  padding-top: 3rem;
-  
+  padding-top: 7.5rem;
+  padding-bottom: 8.5rem;
   margin: 0 auto;
   width: 100%;
   max-width: 1496px;
 }
+
+@media (max-width: 441px) {
+  .main-content {
+    padding-inline: 1.2rem !important;
+  }
+}
+
+

@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: fixed;
+  z-index: 999;
 }
 
 .navbar p {
@@ -20,14 +22,12 @@
   border-radius: 50%;
 }
 
+@media (max-width: 298px) {
+  .navbar p {
+    font-size: 1.01rem;
+  }
 
-
-@media(max-width: 298px) {
-    .navbar p {
-        font-size: 1.01rem;
-      }
-      
-      .navbar .nav-logo {
-        width: 30px;
-      }
+  .navbar .nav-logo {
+    width: 30px;
+  }
 }
