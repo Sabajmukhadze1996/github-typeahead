@@ -40,6 +40,7 @@
   gap: 1rem;
   box-shadow: rgba(24, 24, 24, 0.136) 0px 4px 12px;
   padding-bottom: 7rem;
+  height: 230px;
 }
 
 .card p {
@@ -55,7 +56,7 @@
   border: 1px solid rgb(223, 216, 216);
   color: #fff;
   font-weight: 500;
-  background-color: rgba(14, 41, 71, 0.878);
+  background-color: rgba(14, 41, 71, 0.833);
   font-size: 13px;
   position: absolute;
   bottom: 18px;

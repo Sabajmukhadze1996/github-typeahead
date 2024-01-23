@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GitHubUser } from "../../types/types";
-import "./github-users.css";
 import NotFound from "../../components/not-found/NotFound";
+import "./github-users.css";
 
 const GithubUsers: React.FC<{ users: GitHubUser[] }> = ({ users }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
