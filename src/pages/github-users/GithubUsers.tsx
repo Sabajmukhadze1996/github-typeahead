@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GitHubUser } from "../../types/types";
 import "./github-users.css";
+import NotFound from "../../components/not-found/NotFound";
 
 const GithubUsers: React.FC<{ users: GitHubUser[] }> = ({ users }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -23,9 +24,12 @@ const GithubUsers: React.FC<{ users: GitHubUser[] }> = ({ users }) => {
         />
         <img className="search-box-icon" src="search-icon.png" alt="search-icon" />
       </div>
+
+      {filteredUsers.length === 0 && <NotFound />}
+
       {filteredUsers.map((user: GitHubUser) => (
         <div key={user?.id} className="card">
-          <img src={user?.avatar_url} alt={`${user?.login} avatar`} loading="lazy" />
+          <img src={user?.avatar_url} alt={`${user?.login} avatar`} />
           <div>
             <p>{user?.login?.length > 13 ? `${user?.login?.slice(0, 13)}...` : user?.login} </p>
             <a href={user?.html_url} target="_blank" rel="noopener noreferrer">
