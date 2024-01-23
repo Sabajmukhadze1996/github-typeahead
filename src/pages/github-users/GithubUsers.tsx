@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { GitHubUser } from "../../types/types";
 import "./github-users.css";
 
-
 const GithubUsers: React.FC<{ users: GitHubUser[] }> = ({ users }) => {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const filteredUsers = users.filter((user: GitHubUser) =>
+    user.login.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-      {users?.map((user: GitHubUser) => (
+      <div className="search-box-container">
+        <input
+          className="search-box"
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search User.."
+          autoFocus
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
+        />
+        <img className="search-box-icon" src="search-icon.png" alt="search-icon" />
+      </div>
+      {filteredUsers.map((user: GitHubUser) => (
         <div key={user?.id} className="card">
           <img src={user?.avatar_url} alt={`${user?.login} avatar`} loading="lazy" />
           <div>

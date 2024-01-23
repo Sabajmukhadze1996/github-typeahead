@@ -33,7 +33,7 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <main className="main-content">
+      <main className="main-content" style={{marginTop: "5rem"}}>
         {loading && <Loading />}
         {error && <Error errorMessage={error} />}
         {!loading && !error && <GithubUsers users={users} />}

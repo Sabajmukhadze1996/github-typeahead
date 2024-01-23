@@ -1,3 +1,39 @@
+
+.search-box-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 777;
+}
+
+.search-box {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -90px);
+  z-index: 888;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.819);
+  padding-block: 0.8rem;
+  padding-left: 2.58rem;
+  padding-right: 0.5rem;
+  border-radius: 7px;
+  width: 270px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(34, 32, 32);
+}
+
+
+.search-box-icon {
+  position: relative;
+  left: -104px;
+  transform: translate(-50%, -77px);
+  z-index: 888;
+  width: 21px;
+}
+
+
 .card {
   position: relative;
   padding: 1rem;
